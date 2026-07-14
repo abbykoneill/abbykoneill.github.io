@@ -1,0 +1,453 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Machines that Represent &middot; Abigail O'Neill</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="../new_logo2.png" type="image/png" />
+    <link rel="shortcut icon" href="../new_logo2.png" type="image/png" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Enable the staggered load reveal before first paint -->
+    <script>
+      document.documentElement.className += " js-reveal";
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body id="body" class="blog-page">
+    <div id="main">
+      <!-- Top navigation -->
+      <header id="site-header">
+        <a href="../blog.html" class="back-link">&larr; Back</a>
+        <nav id="nav">
+          <a href="../research.html">Research</a>
+          <a href="../teaching.html">Teaching</a>
+          <a href="../blog.html" class="active">Blog</a>
+        </nav>
+      </header>
+
+      <!-- Post -->
+      <article class="post">
+        <h2>Machines that Represent</h2>
+        <p class="blog-date">Aug 24, 2026</p>
+
+        <div class="post-body">
+          <p>
+            I recently skimmed my health insurance plan to see whether
+            something was covered, and I got overwhelmed by the length of the
+            document and the number of edge cases. Most likely several people
+            negotiated the benefits and prices listed on the page with health
+            care providers, on behalf of my employer.
+          </p>
+          <p>
+            That's an example of <i>representation</i>: my employer spends resources
+            understanding tradeoffs, negotiates a deal, and employees (like me)
+            only have the option to accept or decline the resulting outcome. In
+            our daily dealings with institutions, we frequently delegate
+            representation to others.
+          </p>
+          <p>
+            Why? Part of the reason is that as humans, we do not have the
+            bandwidth to deeply understand every system we depend on. I thought
+            I generally understood how the legal system worked, and then I
+            attended a contracts class at the UC Berkeley School of
+            Law<sup>*</sup> and got lost fast.
+            Multiply that confusion by every institution: education,
+            healthcare, finance, politics. Delegating representation
+            allows us to allocate our attention to other priorities and
+            navigate these systems at a higher level of abstraction.
+          </p>
+          <p>
+            Recently, I listened to an interview with historian Yuval Noah
+            Harari (2026), author of <i>Sapiens</i> and
+            <i>Nexus: A Brief History of Information Networks from the Stone
+            Age to AI</i> (2024). He argues that societies build bureaucracies
+            because their systems grow too complex for any one person to hold
+            in their head, and that each new information technology lets that
+            complexity grow further. He doesn't think AI is simply the next one
+            in that line. Earlier technologies moved information between
+            people, while AI makes decisions and generates ideas on its own,
+            which makes it a participant in the network rather than something
+            that carries information through it.
+          </p>
+          <p>
+            If that's right, the distance between human understanding of their
+            social systems and how they actually work may grow. And while we
+            may shrink this gap through things like transparency and education,
+            we may also want to think about what kind of representation and
+            delegation is most effective.
+          </p>
+          <p>
+            What should representation look like? And furthermore, would we
+            rather be represented by AI or humans?
+          </p>
+          <p>
+            I believe the answer is some nuanced combination of the two. But
+            for today, I'm more curious to focus on what we may see at the
+            individual and system level if AI agents represent us in day to day
+            negotiations and coordinations within our social worlds.
+          </p>
+
+          <p class="post-footnote">
+            <sup>*</sup> fun fact: the UC Berkeley School of Law does not run
+            on Berkeley time&hellip; that was embarrassing.
+          </p>
+
+          <h3>Where This Already Happens</h3>
+          <p>
+            Before we dive into what this looks like in negotiating with
+            friends or political interest groups, it's worth noting that
+            autonomous agents have been competing on someone else's behalf for
+            decades at scale. In financial markets, everyone is simultaneously
+            trying to take value from everyone else. In this case of
+            competition, everyone is fighting over the same utility: capital.
+          </p>
+          <p>
+            The first lesson we can take from financial markets is how quickly
+            parties attempted to turn speed into an advantage. In 2010, Spread
+            Networks spent roughly $300 million laying fiber between New York
+            and Chicago, the two hubs of American trading, to cut round-trip
+            message transmission from 16 milliseconds to 13. Microwave relays,
+            which beam signals from tower to tower through open air rather than
+            through glass, made that cable obsolete within about two years. For
+            the game-theorists, Budish, Cramton, and Shim (2015) conclude the
+            arms race is a prisoner's dilemma built into the market's design:
+            socially wasteful, and ultimately paid for by investors.
+          </p>
+          <p>
+            In response to high-frequency trading strategies aimed at
+            exploiting speed advantages ahead of other investors, IEX
+            (Investors Exchange) launched in 2013 with the &ldquo;magic
+            shoebox&rdquo;: a 38-mile spool of coiled fiber that adds a
+            350-microsecond delay (SEC, 2016). The delay is deliberately
+            asymmetric. Orders and cancellations arriving from outside travel
+            through the coil; IEX's own matching engine, reading direct feeds
+            from the other exchanges, does not. When a stock moves somewhere
+            else, IEX can reprice its current orders before a speed-advantaged
+            trader's order finishes.
+          </p>
+          <p>
+            Our legal system also had to adapt to new strategies that society
+            collectively deemed &ldquo;cheating.&rdquo; Placing orders you
+            intend to cancel wasn't clearly illegal until Dodd-Frank made it
+            so. Michael Coscia became the first person criminally convicted of
+            <i>spoofing</i> in 2015, for roughly $1.4 million made over three months
+            (<i>United States v. Coscia</i>, 2015). On appeal he argued that
+            his cancel-to-execution ratio was no different from hundreds of
+            other traders. Where do we draw the line between strategy and
+            manipulation?
+          </p>
+          <p>
+            Finally, markets learned that automated agents can fail together.
+            On May 6, 2010, one fund set a selling program loose with simple
+            instructions: keep pace with 9% of all trading, no matter the
+            price, no matter how long it takes. It dumped $4.1 billion in
+            twenty minutes. The trading firms that normally buy in a falling
+            market did buy, until each one hit its own safety limit and
+            stopped. They had all picked similar limits, so they all stopped at
+            nearly the same moment. With no buyers left, prices fell off a
+            cliff and about a trillion dollars in value vanished (CFTC &amp;
+            SEC, 2010). It came back within twenty minutes, which is the tell:
+            nothing had changed about the companies, only the machines'
+            willingness to trade.
+          </p>
+          <p>
+            Every one of those responses changed the system rather than the
+            individual traders: a delay built into an exchange, price bands
+            that halt a stock when it moves too far too fast (SEC, 2012), a new
+            criminal category, and algorithms that now have to model other
+            algorithms. We may expect similar (and new) failure cases and
+            system changes as negotiation agents get deployed.
+          </p>
+
+          <h3>What You Say and Whether to Believe It</h3>
+          <p>
+            Markets are a subproblem of the larger question of multi-party
+            competition. In markets everyone's utility is more or less $. In
+            policy negotiation, or even dinner table conversation, that
+            simplification is no longer true. Human language negotiation adds
+            utility functions and preferences that are unknown and complicated.
+          </p>
+          <p>
+            <i>Mixed-motive</i> environments require agents to navigate both
+            <i>cooperation and competition</i> simultaneously. This makes
+            learning the strategy space of <i>what to say</i> in conversation
+            more complex than in purely cooperative or purely competitive
+            settings. Agents benefit from modeling other agents' beliefs and
+            intentions, since this helps predict future actions and identify
+            opportunities for coordination.
+          </p>
+          <p>
+            The canonical example of AI in this setting is CICERO (Bakhtin et
+            al., 2022), Meta's agent for Diplomacy, the world-conquest
+            negotiation game. More recent work, though, argues that Diplomacy
+            rewards strategy and action far more than it rewards negotiation.
+            Wongkamjan et al. (2024) find that CICERO takes more victories than
+            its human counterparts while cooperating less well with them, which
+            suggests the talking is not what carries the wins. That makes
+            Diplomacy a poor place to study negotiation itself: the benchmark
+            goes to the better tactician, not the better negotiator.
+          </p>
+          <p>
+            So we built one where the talking has to matter. In my most recent
+            work,
+            <a href="https://negotiationgame.io/c2c/" target="_blank"
+              >Cooperate to Compete (C2C)</a
+            >
+            (O'Neill et al., 2026), our team
+            built an environment inspired by Risk and Diplomacy in which
+            private negotiation would be more meaningful. Players hold
+            asymmetric secret objectives, deals are non-binding, support can be
+            given to opponents, and alliances form and break as short-term
+            interests align and diverge. By running language models and humans
+            through the game, we show we can raise win rates from 22% to 33%
+            and make observations about model and human behavior.
+          </p>
+          <p>
+            While our strategies were prompted and largely inspired by humans,
+            the next question is how we would train a player for this setting.
+          </p>
+          <p>
+            <i>Maybe the best strategy is to always tell the truth.</i> You never have
+            to keep track of what you told to whom, and everyone you deal with
+            knows your word is worth something. But telling the truth means
+            potentially telling your opponents things they can use against
+            you, and anyone
+            who has worked in sales knows that full disclosure is not how you
+            close.
+          </p>
+          <p>
+            <i>Maybe you're thinking the best strategy is to say whatever it takes
+            (even if it's a lie) to get other players to do what you want in
+            their next action.</i> For repeated play (where you are playing
+            multiple rounds or games with the same opponents), this may not be
+            ideal. If an opponent lied to you last time, you're less likely to
+            be willing to work together and cooperate in the future,
+            potentially hurting their payoff. This is the idea that reputation
+            can help counteract deceitfulness in some cases.
+          </p>
+          <p>
+            Another consideration is that all of this happens in writing. A
+            message from another player isn't only their offer. It is also text
+            your agent reads and acts on, and it has no reliable way to tell
+            the difference between what someone wants and what someone is
+            telling it to do. That is what <i>prompt injection</i> takes
+            advantage of. Vaccaro et al. (2026) ran a competition out of MIT
+            where entrants from more than 40 countries designed negotiating
+            agents across more than 180,000 negotiations, and injection was one
+            of the strategies people used. Maybe this ends up like spoofing,
+            where someone eventually draws a line. It is less clear to me what
+            that line would measure, since a market can count orders placed
+            against orders filled and a conversation has no equivalent
+            number.
+          </p>
+          <p>
+            This is what makes the objective impossible to write down and the
+            problem that much more interesting.
+          </p>
+
+          <h3>Group Dynamics</h3>
+          <p>
+            Everything above is one agent representing one principal against
+            other single agents. Groups are harder. Picture geminis, qwens,
+            claudes, and a long tail of personalized frameworks in the same
+            room, all with different capabilities and very different
+            instructions from their principals. Which of them end up working
+            together, how long that holds, and what comes out the other side is
+            much less defined than the one-on-one case.
+          </p>
+          <p>
+            In game theory these groups are sometimes referred to as
+            <i>coalitions</i>. Real coalitions are
+            messier. They come with identity and language, like a friend group
+            or a political party, and they mostly aren't negotiated out loud.
+            People end up in them because they talk to each other more than
+            they talk to everyone else.
+          </p>
+          <p>
+            Human coordination is often slow and suboptimal. Plenty of workable
+            alliances never form because nobody has the time to figure out who
+            shares an interest with whom, or to have the twelve conversations
+            it would take to find out. Agents don't have that constraint, and
+            may help us find better consensus.
+          </p>
+          <p>
+            On the flip side of everyone doing better is a subgroup doing
+            better than everyone else. Markets already have a version of this.
+            Pricing algorithms have learned supracompetitive prices in
+            simulation without ever communicating with each other (Calvano et
+            al., 2020), and margins rose in the German retail gasoline market
+            after competing stations adopted pricing software (Assad et al.,
+            2024).
+          </p>
+          <p>
+            The open problem I keep landing on for coalitions is measurement.
+            How can we predict behavior if it depends on which agents talk to
+            and work with each other? Theory gives you the <i>stable
+            partition</i>, the one no subgroup would rather break off from, but
+            plenty of games don't have one. We can talk about &ldquo;social
+            welfare,&rdquo; but that's also hard to define and to distribute.
+          </p>
+          <p>
+            This is not only a coordination problem, but very much a mechanism
+            design problem. The platforms we build and the way we structure
+            interactions will affect the way agents behave in them. Consider
+            how many messages an agent gets to send, or whether it can talk to
+            everyone at once instead of picking two counterparts and finishing
+            with them first, or whether messages go out simultaneously or in
+            some turn order. While those decisions are not directly part of the
+            payoff structure, they may change our results. Give an agent one
+            message when it needs two allies and it has to broadcast to
+            everyone instead of engaging in private negotiation. If those
+            design mechanisms are doing that much of the work, <b>whoever
+            writes the protocol may have more say in the outcome than the
+            negotiators do</b>.
+          </p>
+
+          <h3>Concluding Thoughts</h3>
+          <p>
+            I asked earlier whether we'd rather be represented by an AI or by a
+            person, and then set the question aside. In C2C the humans favored
+            lower-complexity deals than the language model agents did. I
+            wouldn't call that a settled result, but it points at something
+            worth sitting with. People and agents may come into a negotiation
+            with different needs and preferences, and deciding which of those
+            you want representing you is a huge thing to start thinking
+            about.
+          </p>
+          <p>
+            Which brings me back to the insurance plan I skimmed and never
+            finished. I would genuinely like something that read it for me,
+            understood my tradeoffs, argued for them, and told me what it gave
+            up. That is the same delegation I already accept from my employer,
+            one layer deeper and much faster.
+          </p>
+          <p>
+            But the case I care about more is my agent representing my beliefs
+            to my family, or to my friends, or in a high-stakes global
+            negotiation. There we would need to know what agents are actually
+            capable of, and where we should let them do the talking. If this
+            works, the win isn't that my agent beats yours. It's that we land
+            on better equilibria than either of us would have reached alone.
+            Which is why the thing I want to study isn't the negotiators. It's
+            the structures we let them negotiate inside, the trust those
+            structures earn, and the society we build around them. That part
+            is still ours to design.
+          </p>
+
+          <h3>Sources</h3>
+          <p class="post-footnote">
+            Assad, S., Clark, R., Ershov, D., &amp; Xu, L. (2024). Algorithmic
+            pricing and competition: Empirical evidence from the German retail
+            gasoline market. <i>Journal of Political Economy, 132</i>(3),
+            723&ndash;771.
+            <a href="https://doi.org/10.1086/726906" target="_blank">doi</a>
+          </p>
+          <p class="post-footnote">
+            Bakhtin, A., Brown, N., Dinan, E., Farina, G., Flaherty, C., Fried,
+            D., Goff, A., Gray, J., Hu, H., Jacob, A. P., Komeili, M., Konath,
+            K., Kwon, M., Lerer, A., Lewis, M., Miller, A. H., Mitts, S.,
+            Renduchintala, A., Roller, S., &hellip; Zijlstra, M. (2022).
+            Human-level play in the game of Diplomacy by combining language
+            models with strategic reasoning. <i>Science, 378</i>(6624),
+            1067&ndash;1074.
+            <a href="https://doi.org/10.1126/science.ade9097" target="_blank">doi</a>
+          </p>
+          <p class="post-footnote">
+            Budish, E., Cramton, P., &amp; Shim, J. (2015). The high-frequency
+            trading arms race: Frequent batch auctions as a market design
+            response. <i>The Quarterly Journal of Economics, 130</i>(4),
+            1547&ndash;1621.
+            <a href="https://doi.org/10.1093/qje/qjv027" target="_blank">doi</a>
+          </p>
+          <p class="post-footnote">
+            Calvano, E., Calzolari, G., Denicol&ograve;, V., &amp; Pastorello,
+            S. (2020). Artificial intelligence, algorithmic pricing, and
+            collusion. <i>American Economic Review, 110</i>(10),
+            3267&ndash;3297.
+            <a href="https://doi.org/10.1257/aer.20190623" target="_blank">doi</a>
+          </p>
+          <p class="post-footnote">
+            Commodity Futures Trading Commission &amp; Securities and Exchange
+            Commission. (2010, September 30). <i>Findings regarding the market
+            events of May 6, 2010: Report of the staffs of the CFTC and SEC to
+            the Joint Advisory Committee on Emerging Regulatory Issues.</i>
+          </p>
+          <p class="post-footnote">
+            Harari, Y. N. (2024). <i>Nexus: A brief history of information
+            networks from the Stone Age to AI.</i> Random House.
+          </p>
+          <p class="post-footnote">
+            Harari, Y. N. (2026, July 30). <i>The next 50 years: Humanity, AI,
+            power</i> [Video]. YouTube.
+            <a href="https://www.youtube.com/watch?v=_V_ed5fuexA" target="_blank">link</a>
+          </p>
+          <p class="post-footnote">
+            O'Neill, A., Zhu, A., Miroyan, M., Norouzi, N., &amp; Gonzalez, J.
+            E. (2026). <i>Cooperate to compete: Strategic coordination in
+            multi-agent conquest</i> (arXiv:2604.25088). arXiv.
+            <a href="https://doi.org/10.48550/arXiv.2604.25088" target="_blank">doi</a>
+          </p>
+          <p class="post-footnote">
+            Securities and Exchange Commission. (2012, May 31). <i>Order
+            approving, on a pilot basis, the national market system plan to
+            address extraordinary market volatility</i> (Release No.
+            34-67091).
+          </p>
+          <p class="post-footnote">
+            Securities and Exchange Commission. (2016, June 17). <i>Order
+            granting the application of Investors Exchange, LLC, for
+            registration as a national securities exchange</i> (Release No.
+            34-78101).
+          </p>
+          <p class="post-footnote">
+            <i>United States v. Coscia</i>, No. 14-cr-00551 (N.D. Ill. 2015),
+            aff'd, 866 F.3d 782 (7th Cir. 2017).
+          </p>
+          <p class="post-footnote">
+            Vaccaro, M., Caosun, M., Ju, H., Aral, S., &amp; Curhan, J. R.
+            (2026). Advancing AI negotiations: A large-scale autonomous
+            negotiation competition. <i>Proceedings of the National Academy of
+            Sciences, 123</i>(23).
+            <a href="https://doi.org/10.1073/pnas.2521774123" target="_blank">doi</a>
+          </p>
+          <p class="post-footnote">
+            Wongkamjan, W., Gu, F., Wang, Y., Hermjakob, U., May, J., Stewart,
+            B. M., Kummerfeld, J. K., Peskoff, D., &amp; Boyd-Graber, J.
+            (2024). More victories, less cooperation: Assessing Cicero's
+            Diplomacy play. In <i>Proceedings of the 62nd Annual Meeting of the
+            Association for Computational Linguistics (Volume 1: Long
+            Papers)</i> (pp. 12423&ndash;12441). Association for Computational
+            Linguistics.
+            <a href="https://aclanthology.org/2024.acl-long.672/" target="_blank">link</a>
+          </p>
+        </div>
+      </article>
+
+      <!-- Footer -->
+      <div id="footer"></div>
+    </div>
+
+    <script src="../reveal.js"></script>
+  </body>
+</html>

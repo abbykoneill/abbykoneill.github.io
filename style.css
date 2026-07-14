@@ -1,0 +1,970 @@
+/* CSS Reset: http://meyerweb.com/eric/tools/css/reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**************************************************/
+/* Scale the whole site up on larger screens (everything is sized in em). */
+
+html {
+  font-size: 106.25%; /* ~17px */
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 118.75%; /* ~19px */
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 131.25%; /* ~21px */
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 150%; /* ~24px */
+  }
+}
+
+@media (min-width: 2000px) {
+  html {
+    font-size: 168.75%; /* ~27px */
+  }
+}
+
+/**************************************************/
+
+html {
+  background: #faf8f3;
+}
+
+#body{
+  font-family: 'Asap', roboto, sans-serif;
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #3a352f;
+  background: #faf8f3;
+}
+
+#main {
+  max-width: 54em;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0px auto;
+  padding: 0 1.25em;
+  position: relative;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #b5643f;  /* warm terracotta accent */
+}
+
+a:hover {
+  text-decoration: none;
+  border-bottom: 1px solid #b5643f;
+}
+
+i {
+  font-style: italic;
+}
+
+b {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.4em;
+  line-height: 1.3em;
+  font-weight: 500;
+  margin-bottom: 0.5em;
+}
+
+/**************************************************/
+/* Profile image and description. */
+
+#intro {
+  font-size: 0.87em;
+  padding-top: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5em;
+}
+
+/* Home page: vertically center the intro so it stays neat on any screen size */
+.home #main {
+  max-width: 51em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Blog pages (listing + posts): keep the header full-width like Research/
+   Teaching, but narrow just the article/listing column for easier reading. */
+.blog-page #blog,
+.blog-page .post {
+  max-width: 42em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Bold text in the intro uses the same brown as links */
+#intro-text b {
+  color: #b5643f;
+}
+
+#intro-text {
+  flex: 1 1 28em;
+  min-width: 16em;
+}
+
+#intro-text p {
+  margin-bottom: 1em;
+  line-height: 1.75em;
+}
+
+#intro-image {
+  flex: 0 0 15em;
+  max-width: 15em;
+  width: 100%;
+  overflow: visible;
+}
+
+#intro-image img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 1.1em;
+  opacity: 0.92;
+  filter: grayscale(100%);
+  box-shadow: 0 14px 34px rgba(120, 96, 72, 0.14);
+}
+
+/* Name + inline social icons */
+.name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5em 0.6em;
+  margin-bottom: 0.5em;
+}
+
+.name-row h1 {
+  margin-bottom: 0;
+}
+
+.social {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: 1.15em;
+}
+
+.social a:hover {
+  border-bottom: none;
+  opacity: 0.8;
+}
+
+/* Small newspaper-style corner rules scattered in the whitespace (home page) */
+.wave-accent {
+  position: fixed;
+  width: 42px;
+  height: 42px;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='42'%20height='42'%20viewBox='0%200%2042%2042'%3E%3Cpath%20d='M2%2034%20L2%202%20L34%202'%20fill='none'%20stroke='%23a08f76'%20stroke-width='1.4'/%3E%3Cpath%20d='M8%2038%20L8%208%20L38%208'%20fill='none'%20stroke='%23a08f76'%20stroke-width='0.9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.22;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.wa-tl {
+  top: 8%;
+  left: 5%;
+}
+
+.wa-tr {
+  top: 8%;
+  right: 5%;
+  transform: scaleX(-1);
+}
+
+.wa-bl {
+  bottom: 8%;
+  left: 5%;
+  transform: scaleY(-1);
+}
+
+.wa-br {
+  bottom: 8%;
+  right: 5%;
+  transform: scale(-1, -1);
+}
+
+@media (max-width: 850px) {
+  .wave-accent {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  #main {
+    /* keep breathing room on top and bottom when very condensed */
+    padding: 1.5em 1em 2.5em;
+  }
+
+  h1 {
+    font-size: 1.75em;
+    line-height: 1.3em;
+    margin-bottom: 0.25em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    line-height: 2em;
+  }
+
+  /* On small screens, top-align instead of vertically centering so the
+     stacked image doesn't get a big empty gap above it. */
+  .home #main {
+    justify-content: flex-start;
+  }
+
+  #intro {
+    flex-direction: column;
+    padding-top: 0.25em;
+    gap: 0.25em;
+  }
+
+  #intro-text {
+    min-width: 0;
+    /* In a column, flex-basis controls height, reset so the text box
+       sizes to its content instead of reserving ~28em of height. */
+    flex: 0 1 auto;
+  }
+
+  #intro-image {
+    flex: 0 0 auto;
+    max-width: 16em;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  .timeline-entry {
+    grid-template-columns: 55px auto;
+  }
+}
+
+/**************************************************/
+/* Section buttons. */
+
+#menu {
+  display: flex;
+}
+
+.menu-item {
+  float: left;
+  margin-right: 2em;
+}
+
+h2 {
+  font-size: 1.6em;
+  line-height: 2.4em;
+  margin-top: 0.5em;
+  color: #ada496;
+}
+
+.selected h2 {
+  color: #333333;
+}
+
+.button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: #ada496;
+  font-size: 1.6em;
+  line-height: 2.4em;
+  margin-top: 0.5em;
+  margin-right: 1em;
+  float: left;
+  padding: 0;
+}
+
+.button:hover {
+  color: #333333;
+}
+
+.button:active,
+.button.is-checked {
+  color: #333333;
+}
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/**************************************************/
+/* Isotope grid list of items. */
+
+.grid {
+  padding-bottom: 6em;
+}
+
+/* clear fix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.description {
+  margin-bottom: 1em;
+}
+
+.list-item {
+  width: 100%;
+  line-height: 1em;
+  margin-top: 1em;
+}
+
+.list-item p.date {
+  display: inline-block;
+  width: 3em;
+  color: #ada496;
+}
+
+/**************************************************/
+/* Gallery of 3 preview videos. */
+
+.previews {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  height: 12.5em;
+}
+
+.previews video {
+  border-radius: 5px;
+}
+
+.previews a:hover {
+  border: none;
+}
+
+.preview1 {
+  grid-column: 1;
+  width: 100%;
+}
+.preview2 {
+  grid-column: 2;
+  width: 100%;
+}
+.preview3 {
+  grid-column: 3;
+  width: 100%;
+}
+
+/**************************************************/
+/* Buttons for showing more or less highlights. */
+
+.toggle-button {
+  margin-top: 2em;
+}
+
+.toggle-button a {
+  color: #ada496;
+}
+
+.toggle-button a:hover {
+  color: rgb(20, 110, 190);
+}
+
+/**************************************************/
+/* Publication details (thumbnail media, title, and description). */
+
+.thumbnail {
+/*  width: 21%;*/
+  width: 18%;
+  float: left;
+  margin-right: 2%;
+}
+
+.thumbnail:hover {
+  border-bottom: none;
+}
+
+.thumbnail img {
+  margin-top: 0.4em;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+.thumbnail video {
+  margin-top: 0.4em;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+}
+
+h3 {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+h3 a {
+  color: #333333;
+}
+
+h3 a:hover {
+  color: rgb(20, 110, 190);
+}
+
+.publication {
+  margin-bottom: 0.5em;
+}
+
+.publication p {
+  font-size: 1em;
+  line-height: 1.5em;
+  color: #ada496;
+}
+
+.project-description {
+  width: 80%;
+  float: left;
+}
+
+/**************************************************/
+/* Subtle footer at the bottom of the page. */
+
+#footer {
+  color: #ada496;           /* light gray text */
+  position: static;         /* no more absolute positioning */
+  line-height: 1em;
+  font-size: 0.8em;
+  padding: 1em 0;
+  margin-top: 3em;          /* space from content above */
+  text-align: center;       /* center align for balance */
+}
+
+/* Make nav menu items like plain text links */
+#menu {
+  display: flex;
+  gap: 1.5em;
+  margin-bottom: 2em;
+}
+
+#menu a {
+  color: #ada496;
+  font-size: 1.6em;
+  line-height: 2.4em;
+}
+
+#menu a:hover {
+  color: #333333;
+  border-bottom: none;
+}
+
+/**************************************************/
+/* Top navigation bar (shared across pages). */
+
+#site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75em 1.5em;
+  padding-top: 1.75em;
+  padding-bottom: 0.5em;
+}
+
+.back-link {
+  color: #ada496;
+  font-size: 1.15em;
+}
+
+.back-link:hover {
+  color: #333333;
+  border-bottom: none;
+}
+
+/* Navigation shown below the intro text on the home page */
+.intro-nav {
+  justify-content: flex-start;
+  gap: 1.5em;
+  margin-top: 1.25em;
+  margin-bottom: 0.6em;
+}
+
+.site-name {
+  font-size: 1.35em;
+  font-weight: 600;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.site-name:hover {
+  border-bottom: none;
+}
+
+/**************************************************/
+/* "Dear Abby" newspaper-clipping button (home page nav). */
+
+.dear-abby-clip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1.1em;
+  border: 1px solid #ebe2d2;
+  border-radius: 4px;
+  background: #fdfaf3;
+  box-shadow: 0 4px 14px rgba(140, 110, 80, 0.08);
+  transform: rotate(-1.5deg);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  line-height: 1.15;
+}
+
+.dear-abby-clip:hover {
+  transform: rotate(0deg) translateY(-1px);
+  box-shadow: 0 6px 18px rgba(140, 110, 80, 0.12);
+  border: 1px solid #ddccb2;
+}
+
+.clip-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 0.95em;
+  color: #ada496;
+}
+
+#nav {
+  display: flex;
+  gap: 1.5em;
+}
+
+#nav a {
+  font-size: 1.15em;
+  color: #ada496;
+}
+
+#nav a:hover {
+  color: #333333;
+  border-bottom: none;
+}
+
+#nav a.active {
+  color: #333333;
+  font-weight: 600;
+}
+
+/**************************************************/
+/* Research / project list entries. */
+
+section {
+  margin-top: 2.5em;
+}
+
+.list-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 1.5em;
+  line-height: 1.5em;
+  width: auto;
+  margin-top: 0;
+}
+
+/* Fix: collapse the baseline whitespace so a wrapped thumbnail
+   doesn't get extra empty space above/below it. */
+.list-item > a {
+  display: inline-block;
+  line-height: 0;
+  border: none;
+}
+
+.list-item > a:hover {
+  border: none;
+}
+
+.list-item img,
+.list-item video {
+  display: block;
+  max-width: 200px;
+  margin-right: 1em;
+  border-radius: 4px;
+}
+
+.project-description {
+  max-width: 48em;
+  width: auto;
+  float: none;
+  flex: 1 1 300px;
+}
+
+.project-description h3 {
+  margin: 0 0 0.3em 0;
+}
+
+.project-meta {
+  color: #555;
+  margin: 0;
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6em;
+  margin-top: 0.4em;
+  font-size: 0.9em;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3em;
+  color: #b5643f;
+  font-size: 0.9em;
+  text-decoration: none;
+  border: none;
+}
+
+.project-links a:hover {
+  color: #8a4a2e;
+  border: none;
+  border-bottom: none;
+}
+
+.project-links img {
+  display: inline;
+  width: 14px;
+  height: 14px;
+  vertical-align: middle;
+  margin-right: -0.15em;
+}
+
+/**************************************************/
+/* Timeline entries for the Teaching page. */
+
+.timeline-entry {
+  display: grid;
+  grid-template-columns: 80px auto;
+  margin-bottom: 0.5em;
+}
+
+.timeline-year {
+  font-weight: bold;
+  color: #777;
+}
+
+.timeline-role {
+  margin: 0;
+}
+
+/**************************************************/
+/* Blog list. */
+
+.blog-list {
+  margin-top: 1em;
+}
+
+.blog-post {
+  display: grid;
+  grid-template-columns: 5.5em auto;
+  align-items: baseline;
+  gap: 0.4em 1em;
+  margin-bottom: 0.85em;
+}
+
+.blog-post h3 {
+  font-size: 1.05em;
+  margin: 0;
+}
+
+.blog-post h3 a {
+  color: #b5643f;
+}
+
+.blog-post h3 a:hover {
+  color: #8a4a2e;
+}
+
+.blog-date {
+  color: #ada496;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .blog-post {
+    grid-template-columns: 4.5em auto;
+  }
+}
+
+.blog-excerpt {
+  line-height: 1.6em;
+  max-width: 700px;
+}
+
+/* Individual blog post */
+.post > h2 {
+  line-height: 1.3em;
+}
+
+.post .blog-date {
+  margin-top: 0.2em;
+  margin-bottom: 1.25em;
+}
+
+.post-body {
+  max-width: 46em;
+  line-height: 1.7em;
+}
+
+.post-body p {
+  margin-bottom: 1em;
+}
+
+.post-body h3 {
+  font-size: 1.15em;
+  font-weight: 600;
+  margin: 2em 0 0.6em;
+}
+
+.post-body h4 {
+  font-size: 1.02em;
+  font-weight: 600;
+  color: #3a352f;
+  margin: 1.4em 0 0.5em;
+}
+
+.quote-list p {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 0.5em;
+}
+
+/* Small newspaper-style footnote aside within a post */
+.post-footnote {
+  font-size: 0.82em;
+  font-style: italic;
+  color: #8b857b;
+  line-height: 1.5em;
+}
+
+.post-footnote sup {
+  font-style: normal;
+}
+
+/* Advice-column letter that opens the post */
+.post-letter {
+  background: #fdf6ef;
+  border-radius: 10px;
+  padding: 1.1em 1.35em 1em;
+  margin: 1.5em 0;
+  font-style: italic;
+  color: #555;
+  box-shadow: 0 10px 28px rgba(181, 100, 63, 0.12);
+}
+
+.post-letter p {
+  margin-bottom: 0.4em;
+}
+
+.post-letter b {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.letter-signed {
+  display: block;
+  text-align: right;
+  color: #8b9199;
+}
+
+
+/* Dear-Abby teaser shown on the blog list */
+.blog-teaser {
+  grid-column: 2;
+  max-width: 40em;
+  font-style: italic;
+  font-size: 0.92em;
+  color: #777;
+  line-height: 1.55em;
+}
+
+.blog-teaser .letter-signed {
+  display: inline;
+  color: #ada496;
+}
+
+/**************************************************/
+/* Newspaper masthead for the Dear Abby column (blog.html). */
+
+.masthead-kicker {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.68em;
+  color: #b7bcc2;
+  margin-bottom: 0.35em;
+}
+
+.masthead-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 700;
+  font-size: 2.5em;
+  text-align: center;
+  color: #222222;
+  border-bottom: 1px solid #e6ddd0;
+  padding-bottom: 0.3em;
+  margin: 0 0 0.4em;
+  line-height: 1.2em;
+}
+
+.masthead-tagline {
+  text-align: center;
+  font-style: italic;
+  color: #999999;
+  font-size: 0.88em;
+  margin-bottom: 1.5em;
+}
+
+@media (max-width: 850px) {
+  .masthead-title {
+    font-size: 1.7em;
+    line-height: 1.4em;
+  }
+}
+
+/**************************************************/
+/* Page-load reveal animation. */
+
+.js-reveal #intro-text > *,
+.js-reveal #intro-image,
+.js-reveal #site-header,
+.js-reveal section > h2,
+.js-reveal section > p,
+.js-reveal .list-item,
+.js-reveal .timeline-entry,
+.js-reveal .blog-post,
+.js-reveal .post > *,
+.js-reveal #footer {
+  opacity: 0;
+}
+
+@keyframes revealTitle {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes revealPop {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.js-reveal .reveal-title {
+  animation: revealTitle 0.6s ease-out both;
+}
+
+.js-reveal .reveal-pop {
+  animation: revealPop 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js-reveal #intro-text > *,
+  .js-reveal #intro-image,
+  .js-reveal #site-header,
+  .js-reveal section > h2,
+  .js-reveal section > p,
+  .js-reveal .list-item,
+  .js-reveal .timeline-entry,
+  .js-reveal .blog-post,
+  .js-reveal .post > *,
+  .js-reveal #footer {
+    opacity: 1;
+  }
+  .js-reveal .reveal-title,
+  .js-reveal .reveal-pop {
+    animation: none;
+  }
+}
+
+@media (max-width: 850px) {
+  #site-header {
+    padding-top: 1.25em;
+  }
+
+  .timeline-entry {
+    grid-template-columns: 55px auto;
+  }
+}

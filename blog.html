@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Dear Abby &middot; Abigail O'Neill</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="new_logo2.png" type="image/png" />
+    <link rel="shortcut icon" href="new_logo2.png" type="image/png" />
+
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <!-- Enable the staggered load reveal before first paint -->
+    <script>
+      document.documentElement.className += " js-reveal";
+    </script>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      /* keep short-titled entries from inheriting a wrapped date's row height */
+      .blog-date {
+        white-space: nowrap;
+      }
+    </style>
+  </head>
+
+  <body id="body" class="blog-page">
+    <div id="main">
+      <!-- Top navigation -->
+      <header id="site-header">
+        <a href="index.html" class="back-link">&larr; Back</a>
+        <nav id="nav">
+          <a href="research.html">Research</a>
+          <a href="teaching.html">Teaching</a>
+          <a href="blog.html" class="active">Blog</a>
+        </nav>
+      </header>
+
+      <!-- Dear Abby: an advice column -->
+      <section id="blog">
+        <p class="masthead-kicker">Est. 2026 &middot; Berkeley, CA</p>
+        <h2 class="masthead-title">Dear Abby</h2>
+        <p class="masthead-tagline">
+          Letters to myself, research notes, and occasional advice from one
+          learning system.
+        </p>
+
+        <div class="blog-list">
+          <!-- Add new posts by copying a .blog-post block below. -->
+          <article class="blog-post">
+            <p class="blog-date">Aug 24, 2026</p>
+            <h3>
+              <a href="posts/represented-by-machines.html"
+                >Machines that Represent</a
+              >
+            </h3>
+            <p class="blog-teaser">
+              What financial markets already learned about autonomous agents
+              competing on someone else's behalf, and what changes when the
+              thing being negotiated isn't money.
+            </p>
+          </article>
+          <article class="blog-post">
+            <p class="blog-date">Jul 3, 2026</p>
+            <h3>
+              <a href="posts/building-a-research-agent.html"
+                >Checkpoint One</a
+              >
+            </h3>
+            <p class="blog-teaser">
+              &ldquo;Dear Abby, one year into the PhD, I'm trying to reflect on
+              the last year, understand what I've learned, and mark the
+              journey.&rdquo;
+              <span class="letter-signed">Best, Abby</span>
+            </p>
+          </article>
+          <article class="blog-post">
+            <p class="blog-date">Oct 15, 2025</p>
+            <h3>
+              <a href="posts/undergrad-research-berkeley.html"
+                >How to Get Involved in Computing Research as an Undergrad at UC Berkeley</a
+              >
+            </h3>
+            <p class="blog-teaser">
+              &ldquo;Dear Abby, I keep hearing I should &lsquo;get involved in
+              research&rsquo; as an undergrad, but no one really explains
+              how&hellip; Where do I even start?&rdquo;
+              <span class="letter-signed">New to Soda Hall</span>
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <div id="footer"></div>
+    </div>
+
+    <script src="reveal.js"></script>
+  </body>
+</html>
